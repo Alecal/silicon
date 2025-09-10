@@ -19,18 +19,36 @@ h1, h2, h3, h4, h5, h6 {text-wrap: balance; margin:0px; padding:0px;}
     font-style: normal;
 }
 
+h1,h2,h3,h4,h5,h6{
+    color:#0B0F19;
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+
 h1{
     font-weight: 900;
-    font-style: normal;
-    font-size: 36pt;
+    font-size: 30pt;
     line-height: 1.2;
 }
 
+h2{
+    font-weight: 900;
+    font-size: 24pt;
+}
+
+h5{
+    font-weight: 900;
+    font-size: 15pt;
+}
+
 p{
-    font-weight: 100;
+    font-family: "Manrope", sans-serif;
+    font-weight: 300;
     font-style: normal;
     line-height: 1.5;
-    margin:10pt 0 20pt 0;
+    color:#565973;
+    font-size: 12pt;
 }
 
 .page{
@@ -69,6 +87,32 @@ p{
         padding-right: 4px;
     }
 }
+.features-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 40px 60px;
+    width: 100%;
+}
+
+.features-info-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 40px 60px;
+    width: 100%;
+}
+
+.features-icons{
+    border:1px solid black;
+    display: flex;
+    align-items:flex-start;
+    gap: 12px;
+}
+.icon{
+    width:32px;
+    height:32px;
+}
 
 .nav-wrapper{
     width: auto;
@@ -91,6 +135,36 @@ p{
     align-items: center;
 }
 
+.features-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 150px;
+}
+
+.features-wrapper .features-image {
+    width: auto;
+    max-width: 100%;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: stretch;
+    border:1px solid black;
+}
+
+.features-wrapper .features-image img {
+    height: 100%; 
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.features-wrapper .features-content {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    border:1px solid black;
+}
+
 .hero-section{
     display: flex;
     justify-content:flex-end;
@@ -98,7 +172,6 @@ p{
 }
 
 .brands-section{
-    padding:80px 0 80px 0;
     height:60dvh;
 }
 
@@ -226,6 +299,7 @@ p{
     gap: 24px;
     align-items: center;
     justify-content: space-between;
+    padding:80px 0 80px 0;
 }
 
 .brand-logo {
