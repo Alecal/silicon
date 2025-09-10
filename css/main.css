@@ -96,6 +96,7 @@ p{
 }
 
 .features-info-wrapper {
+    margin-top:40px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
@@ -104,14 +105,16 @@ p{
 }
 
 .features-icons{
-    border:1px solid black;
     display: flex;
     align-items:flex-start;
     gap: 12px;
 }
 .icon{
-    width:32px;
-    height:32px;
+    padding: 16px;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(99, 102, 241,0.08);
+    border-radius: 8px;
 }
 
 .nav-wrapper{
@@ -135,44 +138,43 @@ p{
     align-items: center;
 }
 
+.brands-section {
+    min-height: 60dvh;
+    display: flex;
+    flex-direction: column;
+    padding-top:70px;
+    padding-bottom:70px;
+}
+
 .features-wrapper {
     display: flex;
     align-items: flex-start;
     gap: 150px;
 }
 
-.features-wrapper .features-image {
+.features-image {
     width: auto;
     max-width: 100%;
     flex: 0 0 auto;
     display: flex;
     align-items: stretch;
-    border:1px solid black;
 }
 
-.features-wrapper .features-image img {
+.features-image img {
     height: 100%; 
     width: auto;
     object-fit: contain;
     display: block;
 }
 
-.features-wrapper .features-content {
-    flex: 1 1 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; 
-    border:1px solid black;
+.features-content {
+
 }
 
 .hero-section{
     display: flex;
     justify-content:flex-end;
     height:40dvh;
-}
-
-.brands-section{
-    height:60dvh;
 }
 
 .gradient-bg {
@@ -299,7 +301,7 @@ p{
     gap: 24px;
     align-items: center;
     justify-content: space-between;
-    padding:80px 0 80px 0;
+    margin-bottom: 70px;
 }
 
 .brand-logo {
