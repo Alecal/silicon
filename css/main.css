@@ -48,7 +48,7 @@ p{
     font-style: normal;
     line-height: 1.5;
     color:#565973;
-    font-size: 1rem;
+    font-size: 1.125rem;
 }
 
 .page {
@@ -255,7 +255,7 @@ p{
 }
 
 .section-wrapper {
-    min-height: 60dvh;
+    min-height: 60rem;
     display: flex;
     flex-direction: column;
     padding-top:70px;
@@ -264,6 +264,7 @@ p{
 
 .testimonials-card-wrapper {
     display: flex;
+    height:20rem;
     justify-content: space-between;
     align-items: center;
     gap: 1.5rem;
@@ -272,9 +273,8 @@ p{
 .testimonials-card{
     position: relative; 
     flex:1;
-    padding:1rem;
-    width:auto;
-    height:250px;
+    height:100%;
+    padding:1.5rem;
     background-color:white;
     border-radius:0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -296,13 +296,53 @@ p{
     box-shadow: 0 4px 6px rgba(99, 102, 241,0.3);
 }
 
+.person-card {
+    display: flex;
+    gap: 1rem;
+    height:3rem;
+    margin:0.5rem;:
+}
+
+
+.person-photo {
+    width: 3rem;
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.avatar-girl {background-image: url('../../../assets/images/avatars/avatar_girl.png');}
+.avatar-guy {background-image: url('../../../assets/images/avatars/avatar_guy.png');}
+
+.person-info {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.person-info p {
+    padding:0;
+    margin:0;
+}
+
+.person-name {
+    font-weighT:bold;
+    font-size:1rem;
+}
+
+.person-title {
+    font-weighT:300;
+    font-size:0.9rem;
+}
+
 .user-rating{
-    border:1px solid red;
-    margin:1.5rem 0;
+    margin:1.3rem 0;
 }
 
 .user-rating i {
     color:#FFBA08;
+    font-size:0.7rem;
 }
 .testimonials-card-icon i {
     font-size:1.5rem;
@@ -312,8 +352,7 @@ p{
 .testimonials-wrapper {
     display: flex;
     flex-direction: column;
-    padding: 4.5rem 1rem;
-    border:1px solid red;
+    padding: 4.5rem 0;
 }
 
 .features-wrapper {
@@ -321,7 +360,6 @@ p{
     align-items: flex-start;
     gap: 150px;
 }
-
 
 .app-features-wrapper {
     display: flex;
@@ -356,10 +394,10 @@ p{
 .hero-section {
     display: flex;
     justify-content: flex-end;
-    height:50dvh;
+    height:50rem;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-    .hero-section {height: 40dvh;}
+    .hero-section {height: 40rem;}
 }
 
 @media (min-width: 1025px) {
@@ -389,7 +427,6 @@ p{
     display: flex;
     justify-content: center;
     align-items: flex-start;
-
     position: relative;
 }
 
@@ -455,7 +492,7 @@ p{
     background-color:#F3F6FF;
 }
 .section{
-    height:40dvh;
+    height:40rem;
 }
 
 .section-text-wrapper {
