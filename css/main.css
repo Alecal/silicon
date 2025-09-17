@@ -77,6 +77,44 @@ p{
     }
 }
 
+
+.showcase-app
+{
+    display: flex;
+    justify-content: center;
+    justify-content:space-evenly;
+    width:100%;
+     margin:0 auto;
+}
+    /* Fixa positionering i divvar */
+    .showcase-app .iphone-bg:nth-child(1) {background-position: left;}
+    .showcase-app .iphone-bg:nth-child(3) {background-position: right;}
+
+.iphone-bg {
+    background-image: url('/assets/images/iphone_highres.png'), url('/assets/images/iphone-placeholder1.png');
+    height: 550px;
+    aspect-ratio: 271 / 546;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    background-size: contain, contain;
+    border:1px solid green;
+    margin:2rem 0;
+}
+
+.lg-screen {
+  display: none;
+}
+
+@media (min-width: 768px) {
+    .lg-screen {
+    display: block;
+    }
+    .showcase-app .iphone-bg {
+        width: auto;
+        flex: 1;
+    }
+}
+
 .features-info-wrapper {
     margin-top: 40px;
     display: flex;
@@ -267,20 +305,6 @@ p{
     top: 140px;
     right: 155px;
 }
-
-.iphone-bg {
-    z-index: 2;
-    background-image: url('/assets/images/iphone_highres.png'), url('/assets/images/iphone-placeholder1.png');
-    height: 550px;
-    aspect-ratio: 271 / 546;
-    background-repeat: no-repeat, no-repeat;
-    background-position: center, center;
-    background-size: contain, contain;
-    border:1px solid green;
-    margin:2rem 0 2rem 0;
-}
-
-
 
 @media (max-width: 767px) {
     .hero-image-wrapper,
