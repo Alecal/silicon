@@ -77,6 +77,33 @@ p{
     }
 }
 
+.list {
+  list-style: none;
+  padding: 2rem 0;
+  margin:0px;
+}
+
+.list p{
+  padding: 0px;
+  margin:0.5rem;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  padding:0;
+  margin:0;
+}
+
+
+.icon-list{
+    padding: 0;
+    margin:0;
+    width: 1rem;
+    height: auto;;
+    margin-right:0.5rem;
+    flex-shrink:0;
+}
 
 .showcase-app
 {
@@ -84,7 +111,8 @@ p{
     justify-content: center;
     justify-content:space-evenly;
     width:100%;
-     margin:0 auto;
+    margin:0 auto;
+    padding:2rem 3rem;
 }
     /* Fixa positionering i divvar */
     .showcase-app .iphone-bg:nth-child(1) {background-position: left;}
@@ -97,12 +125,31 @@ p{
     background-repeat: no-repeat, no-repeat;
     background-position: center, center;
     background-size: contain, contain;
-    border:1px solid green;
     margin:2rem 0;
 }
 
 .lg-screen {
   display: none;
+}
+
+#app-features {
+  display: none;
+}
+
+@media (min-width: 993px) {
+  #app-features {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+    .lg-screen {
+    display: block;
+    }
+    .showcase-app .iphone-bg {
+        width: auto;
+        flex: 1;
+    }
 }
 
 @media (min-width: 768px) {
@@ -185,8 +232,11 @@ p{
     justify-content: space-between;
     align-items: center;
 }
+.text-center{
+    text-align:center;
+}
 
-.brands-section {
+.section-wrapper {
     min-height: 60dvh;
     display: flex;
     flex-direction: column;
@@ -200,12 +250,22 @@ p{
     gap: 150px;
 }
 
-.features-image {
-    width: auto;
-    max-width: 100%;
-    flex: 0 0 auto;
+
+.app-features-wrapper {
     display: flex;
-    align-items: stretch;
+    gap:5rem;
+}
+
+.app-features-content {
+    padding:7rem 3rem;
+    flex:1;
+}
+
+.app-features-image {
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 @media (max-width: 1024px) {
@@ -219,10 +279,6 @@ p{
     width: auto;
     object-fit: contain;
     display: block;
-}
-
-.features-content {
-
 }
 
 .hero-section {
@@ -251,7 +307,6 @@ p{
 }
 
 .column {
-    border:1px solid blue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -320,14 +375,6 @@ p{
 }
 .section{
     height:40dvh;
-}
-
-.section-wrapper {
-    text-align:center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .section-text-wrapper {
@@ -486,8 +533,8 @@ p{
     margin: 0px;
     font-size: 10pt;
     letter-spacing: 0.05em;
-    padding: 10px 20px 10px 20px;
-    font-weight: 600;
+    padding: 0.7rem 1.5rem;
+    font-weight: 300;
     color:white;
     background-color: var(--color-primary);
     border-radius: 5px;
@@ -564,7 +611,6 @@ p{
     margin:0px;
     padding:0px;
     width:100%;
-    border:1px solid red;
 }
 
 
