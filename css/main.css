@@ -128,16 +128,34 @@ p{
     margin:2rem 0;
 }
 
+.iphone-bg-base {
+    height: 550px;
+    aspect-ratio: 271 / 546;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    background-size: contain, contain;
+    margin:2rem 0;
+    opacity:0.7;
+}
+
+.iphone-bg-app1 {
+    background-image: url('/assets/images/iphone-placeholder2.png');
+}
+
+.iphone-bg-app2 {
+    background-image: url('/assets/images/iphone-placeholder3.png');
+}
+
 .lg-screen {
   display: none;
 }
 
-#app-features {
+#app-features, #testimonials {
   display: none;
 }
 
 @media (min-width: 993px) {
-  #app-features {
+  #app-features, #testimonials {
     display: block;
   }
 }
@@ -244,6 +262,52 @@ p{
     padding-bottom:70px;
 }
 
+.testimonials-card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.testimonials-card{
+    position: relative; 
+    flex:1;
+    padding:1rem;
+    width:auto;
+    height:250px;
+    background-color:white;
+    border-radius:0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.testimonials-card-icon{
+    position: absolute;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    
+    width:2.5rem;
+    height:2.5rem; 
+    left:1rem;
+    top:-1.5rem;
+
+    background-color:var(--color-primary);
+    border-radius:0.25rem;
+    box-shadow: 0 4px 6px rgba(99, 102, 241,0.3);
+}
+
+.testimonials-card-icon i {
+    font-size:1.5rem;
+    color:white;
+}
+
+.testimonials-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 4.5rem 1rem;
+    border:1px solid red;
+}
+
 .features-wrapper {
     display: flex;
     align-items: flex-start;
@@ -306,23 +370,31 @@ p{
     );
 }
 
-.column {
+.flex-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     position: relative;
 }
 
+.flex-container-top {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    position: relative;
+}
+
+
 @media (min-width: 768px) and (max-width: 1024px) {
-    .column {
+    .flex-container {
         justify-content: center;
         align-items: center;
     }
 }
 
 @media (min-width: 1025px) {
-    .column {
+    .flex-container {
         justify-content: flex-start;
         align-items: center;
     }
@@ -334,6 +406,7 @@ p{
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    overflow:hidden;
     position: relative;
 }
 
@@ -492,8 +565,8 @@ p{
 }
 
 /* Centrerat på mobil och tablet */
-.hero-text-wrapper .row h1,
-.hero-text-wrapper .row p {
+.hero-text-wrapper .column h1,
+.hero-text-wrapper .column p {
     text-align: center;
 }
 
@@ -518,8 +591,8 @@ p{
         margin: 0 auto;
     }
     /* Text till vänster */
-    .hero-text-wrapper .row h1,
-    .hero-text-wrapper .row p {
+    .hero-text-wrapper .column h1,
+    .hero-text-wrapper .column p {
         text-align: left;
     }
 }
@@ -607,9 +680,17 @@ p{
 }
 
 
-.row{
+.column{
+    flex:1;
     margin:0px;
     padding:0px;
+    width:100%;
+}
+
+.column-2{
+    flex:2;
+    margin:0px;
+    padding:0rem;
     width:100%;
 }
 
