@@ -28,13 +28,13 @@ h1,h2,h3,h4,h5,h6{
 
 h1{
     font-weight: 900;
-    font-size: 30pt;
+    font-size: 2rem;
     line-height: 1.2;
 }
 
 h2{
     font-weight: 900;
-    font-size: 24pt;
+    font-size: 1.5rem;
 }
 
 h5{
@@ -48,7 +48,7 @@ p{
     font-style: normal;
     line-height: 1.5;
     color:#565973;
-    font-size: 12pt;
+    font-size: 1rem;
 }
 
 .page {
@@ -213,6 +213,7 @@ p{
 }
 
 .column {
+    border:1px solid blue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -267,6 +268,17 @@ p{
     right: 155px;
 }
 
+.iphone-bg {
+    z-index: 2;
+    background-image: url('/assets/images/iphone_highres.png'), url('/assets/images/iphone-placeholder1.png');
+    height: 550px;
+    aspect-ratio: 271 / 546;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    background-size: contain, contain;
+    border:1px solid green;
+    margin:2rem 0 2rem 0;
+}
 
 
 
@@ -278,8 +290,32 @@ p{
     }
 }
 
+.dark-bg
+{
+    background-color:#F3F6FF;
+}
 .section{
     height:40dvh;
+}
+
+.section-wrapper {
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-text-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    justify-items: center;
+    text-align: center;
+    gap: 1rem;
+    width: 100%;
 }
 
 .hero-wrapper {
@@ -504,6 +540,7 @@ p{
     margin:0px;
     padding:0px;
     width:100%;
+    border:1px solid red;
 }
 
 
