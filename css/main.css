@@ -258,12 +258,22 @@ p{
 .contact-box-wrapper{
     display: none;
     text-align: center;
+    grid-area: contact-box;
+    gap: 1rem;
+    width: 100%;
+    height:10rem;
 }
 
 @media (min-width: 768px) {
     .contact-box-wrapper{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: stretch;
+        align-items: stretch;
+    }
+    .contact-box {
+        flex: 1 1 0;
+        width: 100%;
     }
 }
 
@@ -272,6 +282,22 @@ p{
     background-color:white;
     border-radius:0.5rem;
     border:1px solid red;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-us-button{
+    padding:2rem 0;
+    display:flex;
+    grid-area: contact-button;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .contact-us-button {
+        display: none;
+    }
 }
 
 .section-wrapper {
@@ -285,8 +311,41 @@ p{
     padding-top: 4.5rem;
     padding-bottom: 4.5rem;
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "faq-title"
+        "contact-box"
+        "accordion"
+        "contact-button";
+    row-gap: 1rem;
+}
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .faq-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "faq-title"
+            "accordion"
+            "contact-box"
+            "contact-button";
+        row-gap: 2rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    .faq-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas:
+            "faq-title accordion"
+            "contact-box accordion"
+            "contact-button";
+        row-gap: 1rem;
+        column-gap: 2rem;
+        align-items: start;
+    }
 }
 
 .testimonials-card-wrapper {
@@ -420,9 +479,17 @@ p{
 }
 
 .accordion-container{
+    grid-area: accordion;
     position: relative; 
     display: flex;
     flex-direction: column;
+    gap: 0;
+}
+
+@media (min-width: 768px) {
+    .accordion-container {
+        gap: 1rem;
+    }
 }
 
 .accordion-item{
@@ -828,6 +895,7 @@ p{
 
 .faq-title{
     text-align:center;
+    grid-area: faq-title;
 }
 
 .logo{
