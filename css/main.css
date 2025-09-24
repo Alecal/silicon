@@ -8,6 +8,7 @@ h1, h2, h3, h4, h5, h6 {text-wrap: balance; margin:0px; padding:0px;}
 :root{
     --color-primary: #6366F1;
     --color-success: #22C55E;
+    --color-light: #9397AD;
     --color-secondary: #22D3EE;
     --color-accent: #F59E42;
     --color-background: #F8FAFC;
@@ -166,6 +167,16 @@ p.text-green{
 
 .lg-screen {
   display: none;
+}
+
+#footer p{
+    color:var(--color-light);
+    font-size:1rem;
+}
+
+#footer{
+    text-align:center;
+    margin-bottom:3rem;
 }
 
 #app-features, #testimonials {
