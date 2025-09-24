@@ -1,7 +1,8 @@
 const darkmodeSwitch = document.querySelector('#darkmode-switch')
 const hasDarkmode = localStorage.getItem('darkmode')
+const logoElement = document.getElementById('logo');
 
-if(hasDarkMode == null) {
+if(hasDarkmode == null) {
     if(window.matchMedia('(prefers-color-scheme: dark)').matches){
         enableDarkMode()
     }   else {
@@ -29,6 +30,7 @@ darkmodeSwitch.addEventListener('change', () => {
 function enableDarkMode () {
     darkmodeSwitch.checked = true
     document.documentElement.classList.add('dark')
+
 }
 function disableDarkMode () {
     darkmodeSwitch.checked = false

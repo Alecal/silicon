@@ -928,12 +928,26 @@ p.text-green{
     border-radius: 8px;
     padding: 10px 20px;
     cursor: pointer;
+    
 }
 
-.store-button object {
+.store-button img {
     width: auto;
     height: 100%;
     display: block;
+}
+
+ html.dark .app-store {
+    filter:invert(1);
+}
+
+
+.google-play {
+    content: url('../../assets/images/app-buttons/google-play.svg');
+}
+
+html.dark .google-play {
+    content: url('../../assets/images/app-buttons/google-play-dark.svg');
 }
 
 .hero-text-wrapper {
@@ -1095,12 +1109,9 @@ p.text-green{
     height: 44px;
 }
 
-@media (prefers-color-scheme: dark) {
-    .logo {
-        background: center / contain no-repeat url('../../../assets/images/silicon_logo_dark.svg');
-    }
+ html.dark .logo{
+    background: center / contain no-repeat url('../../../assets/images/silicon_logo_dark.svg');
 }
-
 
 .brand-logo-wrapper {
     display: flex;
