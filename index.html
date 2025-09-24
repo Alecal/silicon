@@ -16,10 +16,9 @@
 <div class="page">
     <header>
         <div class="header-wrapper">
-            <div class="logo"><img src="assets/images/silicon_logo.svg"></div>
+            <div class="logo"></div>
                 <div class="nav-wrapper">
-                    <label for="toggle-checkbox" id="darkmode">Dark Mode</label>
-                    <input type="checkbox" id="toggle-checkbox" class="toggle-checkbox">
+                    <label for="toggle-checkbox" id="darkmode">Dark Mode</label><input type="checkbox" id="darkmode-switch" class="toggle-checkbox" aria-label="darkmode toggle">
                     <button class="button-main" id="signin-button"><i class="fa-regular fa-user" style="margin-right:0.5rem"></i>Sign in / up</button>
                     <button class="hamburger" id="hamburger-button"><i class="fa-solid fa-bars"></i></button>
                 </div>
@@ -36,8 +35,8 @@
                     <p>We offer you a new generation of the mobile banking.<br>Save, spend & manage money in your pocket.</p></div>
                     <div class="column">
                         <div class="app-button-wrapper">
-                            <button class="store-button"><img src="assets\images\app-store.svg" alt="Download on the App Store"></button>
-                            <button class="store-button"><img src="assets\images\google-play.svg" alt="Download on the App Store"></button>
+                            <button class="store-button"><img src="assets\images\app-buttons\app-store.svg" alt="Download on the App Store"></button>
+                            <button class="store-button"><img src="assets\images\app-buttons\google-play.svg" alt="Download on the App Store"></button>
                         </div>
                     </div>
                 </div>
@@ -293,6 +292,7 @@
 </footer>
 </main>
 
+    <script src="js/darkmode.js"></script>
     <script src="https://kit.fontawesome.com/aa2d946b8a.js" crossorigin="anonymous"></script>
 </body>
 </html>
