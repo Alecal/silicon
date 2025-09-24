@@ -37,6 +37,11 @@ h2{
     font-size: 1.5rem;
 }
 
+h4{
+    font-weight: 900;
+    font-size: 1rem;
+}
+
 h5{
     font-weight: 900;
     font-size: 15pt;
@@ -54,17 +59,14 @@ p{
 .page {
     max-width: 576px;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    margin: auto;
+    padding: 0 1rem;
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
     .page {
         max-width: 768px;
-        padding-left: 8px;
-        padding-right: 8px;
+        padding: 0 0.5rem;
     }
 }
 
@@ -72,8 +74,7 @@ p{
 @media (min-width: 993px) {
     .page {
         max-width: 1200px;
-        padding-left: 16px;
-        padding-right: 16px;
+        padding: 0 1rem;
     }
 }
 
@@ -254,17 +255,43 @@ p{
     text-align:center;
 }
 
+.contact-box-wrapper{
+    display: none;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contact-box-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.contact-box{
+    padding:1.5rem;
+    background-color:white;
+    border-radius:0.5rem;
+    border:1px solid red;
+}
+
 .section-wrapper {
-    min-height: 60rem;
     display: flex;
     flex-direction: column;
-    padding-top:70px;
-    padding-bottom:70px;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+}
+
+.faq-wrapper{
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
 }
 
 .testimonials-card-wrapper {
     display: flex;
-    height:20rem;
+    min-height:20rem;
     justify-content: space-between;
     align-items: center;
     gap: 1.5rem;
@@ -277,7 +304,7 @@ p{
     padding:1.5rem;
     background-color:white;
     border-radius:0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .testimonials-card-icon{
@@ -352,7 +379,8 @@ p{
 .testimonials-wrapper {
     display: flex;
     flex-direction: column;
-    padding: 4.5rem 0;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
 }
 
 .features-wrapper {
@@ -389,6 +417,65 @@ p{
     width: auto;
     object-fit: contain;
     display: block;
+}
+
+.accordion-container{
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion-item{
+    padding:1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    background-color:white;
+    border-radius:0.5rem;
+    border: 1px solid #E2E5F1;
+    box-shadow: none;
+}
+
+.accordion-arrow-active{
+    position: relative;
+    flex-shrink: 0;
+    width:2.5rem;
+    height:2.5rem; 
+    background-color:var(--color-primary);
+    border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accordion-arrow-active i{
+    color:white;
+    font-size:0.7rem;
+}
+
+.accordion-arrow{
+    position: relative;
+    flex-shrink: 0;
+    width:2.5rem;
+    height:2.5rem; 
+    background-color:#F3F6FF;
+    border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accordion-arrow i{
+    color:#3E4265;
+    font-size:0.7rem;
+}
+
+@media (min-width: 768px) {
+    .accordion-item {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border: 0px;
+    }
 }
 
 .hero-section {
@@ -739,6 +826,9 @@ p{
     width:100%;
 }
 
+.faq-title{
+    text-align:center;
+}
 
 .logo{
 
