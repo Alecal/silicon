@@ -10,6 +10,7 @@ h1, h2, h3, h4, h5, h6 {text-wrap: balance; margin:0px; padding:0px;}
     --col-bg:#fff;
 
     --col-store-button:#131022;
+    --col-brand-button:#fff;
 
     --col-bg-dark:#F3F6FF;
     --col-text-headline:rgb(0, 0, 0);
@@ -43,6 +44,7 @@ html{
     --col-text-paragraph:#fff;
     --col-input:#191d27;
     --col-store-button:#fff;
+    --col-brand-button:#131022;
 
     --col-border-light: #e2e5f133;
 }
@@ -62,8 +64,8 @@ h1,h2,h3,h4,h5,h6{
 
 h1{
     font-weight: 900;
-    font-size: 2rem;
-    line-height: 1.2;
+    font-size: 2.5rem;
+    line-height: 1.5;
 }
 
 h2{
@@ -112,18 +114,17 @@ p.text-green{
     padding: 0 1rem;
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .page {
         max-width: 768px;
         padding: 0 0.5rem;
     }
 }
 
-/* Desktop */
-@media (min-width: 993px) {
+@media (min-width: 1025px) {
     .page {
         max-width: 1200px;
-        padding: 0 1rem;
+        padding: 0 2rem; 
     }
 }
 
@@ -744,18 +745,153 @@ p.text-green{
 
 .hero-section {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items:center;
     height:50rem;
+    overflow:hidden;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-    .hero-section {height: 40rem;}
+    .hero-section {
+        height: 40rem;
+        align-items:start;
+
+    }
 }
 
 @media (min-width: 1025px) {
-    .hero-section {height: 550px;}
+    .hero-section {height: 40rem;}
 }
 
+.hero-wrapper {
+    width:100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "hero-headline"
+                         "hero-subtext"
+                         "app-buttons";
 
+    align-content: center; 
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero-wrapper {
+        border:1px solid red;
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: auto auto auto; 
+        grid-template-areas: "hero-headline hero-headline hero-headline"
+                             "hero-subtext hero-image-wrapper hero-image-wrapper"
+                             "hero-subtext hero-image-wrapper hero-image-wrapper"
+                             "app-buttons hero-image-wrapper hero-image-wrapper";
+        
+        align-content: start; 
+        justify-items: center;
+        text-align: left;
+    }
+}
+
+@media (min-width: 1025px) {
+    .hero-wrapper {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto; 
+        row-gap: 2rem;
+
+        grid-template-areas: "hero-headline hero-image-wrapper"
+                             "hero-subtext  hero-image-wrapper"
+                             "app-buttons   hero-image-wrapper";
+        
+        align-content: start; 
+        justify-items: start; 
+        text-align: left;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero-headline
+    {
+        text-align:center;
+        width:50%;
+    }
+}
+
+.hero-headline
+{
+    grid-area: hero-headline;
+    border:1px solid red;
+}
+
+.hero-subtext
+{
+    grid-area: hero-subtext;
+}
+.hero-image-wrapper {
+    grid-area: hero-image-wrapper;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+}
+
+.hero-iphone-bg,
+.hero-iphone-sm {
+    position: absolute;
+    height: 600px;
+    aspect-ratio: 271 / 546;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    background-size: contain, contain;
+}
+
+.hero-iphone-bg {
+    z-index: 2;
+    background-image: url('/assets/images/iphone_highres.png'), url('/assets/images/iphone-placeholder1.png');
+    top: -3rem;
+    right: 0;
+}
+
+.hero-iphone-sm {
+    z-index: 1;
+    background-image: url('/assets/images/iphone_highres.png'), url('/assets/images/iphone-placeholder2.png');
+    top: 3.5rem;
+    right: 11rem;
+}
+
+.app-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-button-wrapper img {
+    grid-area: app-buttons;
+    display: block;
+    max-height: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .app-button-wrapper {
+        flex-direction: row;
+        width: 350px;
+        gap: 15px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .app-button-wrapper {
+        flex-direction: row;
+        width: 400px;
+        gap: 15px;
+    }
+}
 
 .gradient-bg {
     background-color: var(--color-background);
@@ -796,40 +932,6 @@ p.text-green{
     }
 }
 
-.hero-image-wrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    overflow:hidden;
-    position: relative;
-}
-
-.hero-iphone-bg,
-.hero-iphone-sm {
-    position: absolute;
-    height: 550px;
-    aspect-ratio: 271 / 546;
-    background-repeat: no-repeat, no-repeat;
-    background-position: center, center;
-    background-size: contain, contain;
-}
-
-.hero-iphone-bg {
-    z-index: 2;
-    background-image: url('/assets/images/iphone_highres.png'), url('/assets/images/iphone-placeholder1.png');
-    top: 50px;
-    right: 0;
-}
-
-.hero-iphone-sm {
-    z-index: 1;
-    background-image: url('/assets/images/iphone_highres.png'), url('/assets/images/iphone-placeholder2.png');
-    top: 140px;
-    right: 155px;
-}
-
 @media (max-width: 767px) {
     .hero-image-wrapper,
     .hero-iphone-bg,
@@ -857,64 +959,6 @@ p.text-green{
     gap: 1rem;
     width: 100%;
 }
-
-.hero-wrapper {
-    display: block;
-    margin: auto;
-    padding-top: 1rem;
-}
-
-.hero-wrapper > :first-child {
-    width: 100%;
-}
-
-.hero-wrapper > :nth-child(2) {
-    display: none;
-}
-
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .hero-wrapper {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-        grid-column-gap: 0;
-        grid-row-gap: 0;
-        margin: 0;
-        padding-top: 1rem;
-    }
-
-/* Visa på tablet */
-    .hero-wrapper > :nth-child(2) { 
-        display: block;
-    }
-
-    .hero-wrapper > :first-child {
-        width: auto;
-    }
-}
-
-/* Desktop */
-@media (min-width: 1025px) {
-    .hero-wrapper {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-        grid-column-gap: 0;
-        grid-row-gap: 0;
-        margin: 0;
-        padding-top: 1rem;
-    }
-
-    .hero-wrapper > :nth-child(2) {
-        display: block;
-    }
-
-    .hero-wrapper > :first-child {
-        width: auto;
-    }
-}
-
 
 .store-button {
     width: 100%;
@@ -950,52 +994,6 @@ html.dark .google-play {
     content: url('../../assets/images/app-buttons/google-play-dark.svg');
 }
 
-.hero-text-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
-    grid-column-gap: 0;
-    grid-row-gap: 0;
-    justify-items: center;
-    text-align: center;
-    gap: 1rem;
-    width: 100%;
-}
-
-/* Centrerat på mobil och tablet */
-.hero-text-wrapper .column h1,
-.hero-text-wrapper .column p {
-    text-align: center;
-}
-
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .hero-text-wrapper {
-        justify-items: center;
-        text-align: center;
-        gap: 1rem;
-        width: 90%;
-        margin: 0 auto;
-    }
-}
-
-/* Till desktop */
-@media (min-width: 1025px) {
-    .hero-text-wrapper {
-        justify-items: end;
-        text-align: left;
-        gap: 1rem;
-        width: 100%;
-        margin: 0 auto;
-    }
-    /* Text till vänster */
-    .hero-text-wrapper .column h1,
-    .hero-text-wrapper .column p {
-        text-align: left;
-    }
-}
-
-
 .button-main{ 
     display: flex;
     justify-content: space-between;
@@ -1009,38 +1007,6 @@ html.dark .google-play {
     color:white;
     background-color: var(--color-primary);
     border-radius: 5px;
-}
-
-.app-button-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-}
-
-.app-button-wrapper img {
-    display: block;
-    max-height: 100%;
-    height: auto;
-    margin: 0 auto;
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .app-button-wrapper {
-        flex-direction: row;
-        width: 350px;
-        gap: 15px;
-    }
-}
-
-@media (min-width: 1025px) {
-    .app-button-wrapper {
-        flex-direction: row;
-        width: 400px;
-        gap: 15px;
-    }
 }
 
 .nav-wrapper{
@@ -1128,6 +1094,7 @@ html.dark .google-play {
     align-items: center; 
     justify-content: center;
     border-radius: 8px;
+    background-color:var(--col-brand-button);
     border: 1px solid var(--col-border-light);
 }
 
