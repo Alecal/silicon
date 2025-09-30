@@ -650,7 +650,7 @@ p.text-green{
 }
 
 .app-features-content {
-    padding:7rem 3rem;
+    padding:5rem 0rem;
     flex:1;
 }
 
@@ -940,7 +940,7 @@ p.text-green{
 
 .flex-container-top {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: flex-start;
     position: relative;
 }
@@ -1077,7 +1077,6 @@ html.dark .google-play {
     margin:0px;
     padding:0px;
     width:100%;
-    border:1px solid red;
 }
 
 .column-2{
