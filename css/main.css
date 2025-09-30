@@ -14,12 +14,13 @@ h1, h2, h3, h4, h5, h6 {text-wrap: balance; margin:0px; padding:0px;}
 
     --col-bg-dark:#F3F6FF;
     --col-text-headline:rgb(0, 0, 0);
-    --col-text-paragraph:#565973;
+    --col-text-paragraph:#585C7B;
     --col-input:#fff;
 
     --col-box:#fff;
     --col-accordion:#fff;
     --col-accordion-arrow:#3E4265;
+    --col-accordion-arrow-box:#F3F6FF;
     
     --col-success: #22C55E;
     --col-light: #9397AD;
@@ -39,9 +40,10 @@ html{
     --col-box:#1e212b;
     --col-accordion:#151822;
     --col-accordion-arrow:#fff;
+    --col-accordion-arrow-box:#1e212b;
 
     --col-text-headline:#fff;
-    --col-text-paragraph:#fff;
+    --col-text-paragraph:#b5b7ba;
     --col-input:#191d27;
     --col-store-button:#fff;
     --col-brand-button:#131022;
@@ -49,7 +51,7 @@ html{
     --col-border-light: #e2e5f133;
 }
 
-*{
+body{
     font-family: "Manrope", sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -57,7 +59,6 @@ html{
 
 h1,h2,h3,h4,h5,h6{
     color:var(--col-text-headline);
-    font-family: "Manrope", sans-serif;
     font-style: normal;
     font-weight: 300;
 }
@@ -89,9 +90,6 @@ h5{
 }
 
 p{
-    font-family: "Manrope", sans-serif;
-    font-weight: 300;
-    font-style: normal;
     line-height: 1.5;
     color:var(--col-text-paragraph);
     font-size: 1.125rem;
@@ -676,6 +674,68 @@ p.text-green{
     display: block;
 }
 
+.accordion-header {
+    padding:1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    background-color:var(--col-accordion);
+    border-radius:0.5rem;
+    border: 0px solid var(--col-border-light);
+    box-shadow: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.accordion-item-wrapper {
+    border: 1px solid var(--col-border-light);
+    border-radius: 0.5rem;
+    box-shadow: none;
+    overflow: hidden;
+    background-color: var(--col-accordion);
+}
+
+.accordion-header h4 {
+    margin: 0;
+}
+
+.accordion-content {
+    top:-1rem;
+    padding: 0 1.5rem;
+    max-height: 0; 
+    overflow: hidden;
+    transition: max-height 0.2s ease-out, padding 0.2s ease-out;
+    background-color: var(--col-accordion);
+}
+
+.accordion-item-wrapper.active .accordion-content {
+    max-height: 500px;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    margin-top: -0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+
+.accordion-arrow { 
+    position: relative;
+    flex-shrink: 0;
+    width:2.5rem;
+    height:2.5rem; 
+    background-color:var(--col-accordion-arrow-box);
+    border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.accordion-item-wrapper.active .accordion-arrow {
+    transform: rotate(180deg);
+}
+
 .accordion-container{
     grid-area: accordion;
     position: relative; 
@@ -690,49 +750,17 @@ p.text-green{
     }
 }
 
-.accordion-item{
-    padding:1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width:100%;
-    background-color:var(--col-accordion);
-    border-radius:0.5rem;
-    border: 1px solid var(--col-border-light);
-    box-shadow: none;
-}
-
-.accordion-arrow-active{
-    position: relative;
-    flex-shrink: 0;
-    width:2.5rem;
-    height:2.5rem; 
+.arrow-active{
     background-color:var(--color-primary);
-    border-radius:50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.accordion-arrow-active i{
-    color:#fff;
-    font-size:0.7rem;
-}
-
-.accordion-arrow{
-    position: relative;
-    flex-shrink: 0;
-    width:2.5rem;
-    height:2.5rem; 
-    background-color:var(--col-box);
-    border-radius:50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .accordion-arrow i{
     color:var(--col-accordion-arrow);
+    font-size:0.7rem;
+}
+
+.arrow-active i{
+    color:#fff;
     font-size:0.7rem;
 }
 
@@ -1114,7 +1142,7 @@ html.dark .google-play {
     appearance: none;
     width: 40px;
     height: 22px;
-    background: #9397AD;
+    background: #131022;
     border-radius: 12px;
     position: relative;
     outline: none;
@@ -1138,5 +1166,5 @@ html.dark .google-play {
 }
 .toggle-checkbox:checked::before {
     left: 21px;
-    background: #374151;
+    background: #131022;
 }
