@@ -1,7 +1,6 @@
 *, *:before, *:after {box-sizing: border-box;}
 html {scroll-behavior: smooth;}
 img {max-width: 100%; display: block;}
-h1, h2, h3, h4, h5, h6 {text-wrap: balance; margin:0px; padding:0px;}
 
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Manrope:wght@200..800&display=swap');
 
@@ -15,102 +14,99 @@ h1, h2, h3, h4, h5, h6 {text-wrap: balance; margin:0px; padding:0px;}
     to { opacity: 1; transform: translateY(0); }
 }
 
-:root{
+:root {
+    /* Primary Colors */
     --color-primary: #6366F1;
-    --col-bg:#fff;
-
-    --col-store-button:#131022;
-    --col-brand-button:#fff;
-
-    --col-bg-dark:#F3F6FF;
-    --col-text-headline:rgb(0, 0, 0);
-    --col-text-paragraph:#585C7B;
-    --col-input:#fff;
-
-    --col-box:#fff;
-    --col-accordion:#fff;
-    --col-accordion-arrow:#3E4265;
-    --col-accordion-arrow-box:#F3F6FF;
-    
     --col-success: #22C55E;
+
+    /* Backgrounds */
+    --col-bg: #fff;
+    --col-bg-dark: #F3F6FF;
+    --col-box: #fff;
+    --col-accordion: #fff;
+
+    /* Text */
+    --col-text-headline: #000000;
+    --col-text-paragraph: #585C7B;
     --col-light: #9397AD;
+
+    /* Inputs */
+    --col-input: #fff;
+
+    /* Buttons */
+    --col-store-button: #131022;
+    --col-brand-button: #fff;
+
+    /* Accordion */
+    --col-accordion-arrow: #3E4265;
+    --col-accordion-arrow-box: #F3F6FF;
+
+    /* Borders */
     --col-border-light: #E2E5F1;
 }
 
-html{
-    background-color:var(--col-bg);
-    color-scheme: light;
-}
-
-.dark{
+.dark {
     color-scheme: dark;
-    --col-bg:#0b0f19;
-    --col-bg-dark:#151822;
-        
-    --col-box:#1e212b;
-    --col-accordion:#151822;
-    --col-accordion-arrow:#fff;
-    --col-accordion-arrow-box:#1e212b;
 
-    --col-text-headline:#fff;
-    --col-text-paragraph:#b5b7ba;
-    --col-input:#191d27;
-    --col-store-button:#fff;
-    --col-brand-button:#131022;
+    /* Backgrounds */
+    --col-bg: #0b0f19;
+    --col-bg-dark: #151822;
+    --col-box: #1e212b;
+    --col-accordion: #151822;
 
+    /* Text */
+    --col-text-headline: #fff;
+    --col-text-paragraph: #b5b7ba;
+
+    /* Inputs */
+    --col-input: #191d27;
+
+    /* Buttons */
+    --col-store-button: #fff;
+    --col-brand-button: #131022;
+
+    /* Accordion */
+    --col-accordion-arrow: #fff;
+    --col-accordion-arrow-box: #1e212b;
+
+    /* Borders */
     --col-border-light: #e2e5f133;
 }
 
-body{
-    font-family: "Manrope", sans-serif;
-    font-weight: 300;
+html {
+    background-color: var(--col-bg);
+    color-scheme: light;
+}
+
+body {font-family: "Manrope", sans-serif; font-weight: 300; font-style: normal;}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+    margin:0px;
+    padding:0px;
+    color: var(--col-text-headline);
     font-style: normal;
-}
-
-h1,h2,h3,h4,h5,h6{
-    color:var(--col-text-headline);
-    font-style: normal;
-    font-weight: 300;
-}
-
-h1{
     font-weight: 900;
-    font-size: 2.5rem;
+}
+
+h1 {font-size: 2.5rem;  line-height: 1.5;}
+h2 {font-size: 1.5rem;}
+h3 {font-size: 1.2rem;}
+h4 {font-size: 1rem;}
+h5 {font-size: 15pt;}
+
+p {
     line-height: 1.5;
-}
-
-h2{
-    font-weight: 900;
-    font-size: 1.5rem;
-}
-
-h3{
-    font-weight: 900;
-    font-size: 1.2rem;
-}
-
-h4{
-    font-weight: 900;
-    font-size: 1rem;
-}
-
-h5{
-    font-weight: 900;
-    font-size: 15pt;
-}
-
-p{
-    line-height: 1.5;
-    color:var(--col-text-paragraph);
+    color: var(--col-text-paragraph);
     font-size: 1.125rem;
 }
 
-p.text-primary{
+p.text-primary {
     color: var(--color-primary);
     font-weight: 900;
 }
 
-p.text-green{
+p.text-green {
     color: var(--col-success);
     font-weight: 900;
 }
@@ -152,7 +148,6 @@ p.text-green{
   padding:0;
   margin:0;
 }
-
 
 .icon-list{
     padding: 0;
