@@ -5,6 +5,16 @@ h1, h2, h3, h4, h5, h6 {text-wrap: balance; margin:0px; padding:0px;}
 
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Manrope:wght@200..800&display=swap');
 
+@keyframes fadeInFromBottomFirst {
+    from { opacity: 0; transform: translateY(20rem); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInFromBottomSecond {
+    from { opacity: 0; transform: translateY(20rem); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 :root{
     --color-primary: #6366F1;
     --col-bg:#fff;
@@ -106,22 +116,21 @@ p.text-green{
 }
 
 .page {
-    max-width: 576px;
     width: 100%;
     margin: auto;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) {
     .page {
-        max-width: 768px;
-        padding: 0 0.5rem;
+        max-width: 992px;
+        padding: 0 2rem;
     }
 }
 
 @media (min-width: 1025px) {
     .page {
-        max-width: 1200px;
+        max-width: 1320px;
         padding: 0 2rem; 
     }
 }
@@ -791,6 +800,7 @@ p.text-green{
 }
 
 .hero-wrapper {
+    height:100%;
     width:100%;
     display: grid;
     grid-template-columns: 1fr;
@@ -806,7 +816,6 @@ p.text-green{
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .hero-wrapper {
-        border:1px solid red;
         grid-template-columns: 1fr 1fr 1fr; 
         grid-template-rows: auto auto auto; 
         grid-template-areas: "hero-headline hero-headline hero-headline"
@@ -830,7 +839,7 @@ p.text-green{
                              "hero-subtext  hero-image-wrapper"
                              "app-buttons   hero-image-wrapper";
         
-        align-content: start; 
+        align-content: center; 
         justify-items: start; 
         text-align: left;
     }
@@ -840,52 +849,72 @@ p.text-green{
     .hero-headline
     {
         text-align:center;
-        width:50%;
+        width:50vw;
+        margin-bottom:6rem;
     }
 }
 
 .hero-headline
 {
     grid-area: hero-headline;
-    border:1px solid red;
 }
 
 .hero-subtext
 {
     grid-area: hero-subtext;
 }
+
 .hero-image-wrapper {
+    position:relative;
+    z-index:-1000;
     grid-area: hero-image-wrapper;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
     position: relative;
 }
 
 .hero-iphone-bg,
 .hero-iphone-sm {
     position: absolute;
-    height: 600px;
+    max-height:600px;
+    height:100vw;
+    padding:0px;
+    margin:0px;
     aspect-ratio: 271 / 546;
     background-repeat: no-repeat, no-repeat;
     background-position: center, center;
     background-size: contain, contain;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .hero-iphone-bg {
     z-index: 2;
     background-image: url('/assets/images/iphone_highres.png'), url('/assets/images/iphone-placeholder1.png');
-    top: -3rem;
+    top: -4rem;
     right: 0;
+    opacity: 0;
+    animation-name: fadeInFromBottomFirst;
+    animation-duration: 0.5s;
 }
 
 .hero-iphone-sm {
     z-index: 1;
     background-image: url('/assets/images/iphone_highres.png'), url('/assets/images/iphone-placeholder2.png');
-    top: 3.5rem;
-    right: 11rem;
+    top: 2.5rem;
+    right: 30%;
+    opacity: 0;
+    animation-name: fadeInFromBottomSecond;
+    animation-duration: 0.7s;
+    animation-delay: 0.3s;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero-iphone-sm
+    {
+        right: 9vw;
+        width:34vw;
+    }
 }
 
 .app-button-wrapper {
