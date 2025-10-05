@@ -174,7 +174,7 @@ p.text-green {
     .showcase-app .iphone-bg:nth-child(3) {background-position: right;}
 
 .iphone-bg {
-    background-image: url('/assets/images/iphone_highres.png'), url('/assets/images/iphone-placeholder1.png');
+    background-image: url('../assets/images/iphone_highres.png'), url('../assets/images/iphone-placeholder1.png');
     height: 550px;
     aspect-ratio: 271 / 546;
     background-repeat: no-repeat, no-repeat;
@@ -194,11 +194,11 @@ p.text-green {
 }
 
 .iphone-bg-app1 {
-    background-image: url('/assets/images/iphone-placeholder2.png');
+    background-image: url('../assets/images/iphone-placeholder2.png');
 }
 
 .iphone-bg-app2 {
-    background-image: url('/assets/images/iphone-placeholder3.png');
+    background-image: url('../assets/images/iphone-placeholder3.png');
 }
 
 .lg-screen {
@@ -434,7 +434,7 @@ p.text-green {
 }
 
 .subscribe-input-field {
-    background-image: url('/assets/images/icons/email.svg');
+    background-image: url('../assets/images/icons/email.svg');
     background-repeat: no-repeat;
     background-position: 0.8rem center;
     margin: 0;
@@ -465,7 +465,7 @@ p.text-green {
     grid-area: subscribe-icon;
     width:4rem;
     height:4rem;
-    background-image: url('/assets/images/icons/notification.svg');
+    background-image: url('../assets/images/icons/notification.svg');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -547,8 +547,8 @@ p.text-green {
     background-repeat: no-repeat;
 }
 
-.icon-phone{background-image: url('/assets/images/icons/phone.svg');}
-.icon-chat{background-image: url('/assets/images/icons/chat.svg');}
+.icon-phone{background-image: url('../assets/images/icons/phone.svg');}
+.icon-chat{background-image: url('../assets/images/icons/chat.svg');}
 
 .testimonials-card-wrapper {
     display: flex;
@@ -600,8 +600,8 @@ p.text-green {
     background-position: center;
 }
 
-.avatar-girl {background-image: url('/assets/images/avatars/avatar_girl.png');}
-.avatar-guy {background-image: url('/assets/images/avatars/avatar_guy.png');}
+.avatar-girl {background-image: url('../assets/images/avatars/avatar_girl.png');}
+.avatar-guy {background-image: url('../assets/images/avatars/avatar_guy.png');}
 
 .person-info {
     flex: 1; 
@@ -887,7 +887,7 @@ p.text-green {
 
 .hero-iphone-bg {
     z-index: 2;
-    background-image: url('/assets/images/iphone_highres.png'), url('/assets/images/iphone-placeholder1.png');
+    background-image: url('../assets/images/iphone_highres.png'), url('/assets/images/iphone-placeholder1.png');
     top: -4rem;
     right: 0;
     opacity: 0;
@@ -897,7 +897,7 @@ p.text-green {
 
 .hero-iphone-sm {
     z-index: 1;
-    background-image: url('/assets/images/iphone_highres.png'), url('/assets/images/iphone-placeholder2.png');
+    background-image: url('../assets/images/iphone_highres.png'), url('/assets/images/iphone-placeholder2.png');
     top: 2.5rem;
     right: 30%;
     opacity: 0;
@@ -1041,11 +1041,11 @@ p.text-green {
 
 
 .google-play {
-    content: url('/assets/images/app-buttons/google-play.svg');
+    content: url('../assets/images/app-buttons/google-play.svg');
 }
 
 html.dark .google-play {
-    content: url('/assets/images/app-buttons/google-play-dark.svg');
+    content: url('../assets/images/app-buttons/google-play-dark.svg');
 }
 
 .button-main{ 
@@ -1120,13 +1120,13 @@ html.dark .google-play {
 }
 
 .logo{
-    background: center / contain no-repeat url('/assets/images/silicon_logo.svg');
+    background: center / contain no-repeat url('../assets/images/silicon_logo.svg');
     width: 122px;
     height: 44px;
 }
 
  html.dark .logo{
-    background: center / contain no-repeat url('/assets/images/silicon_logo_dark.svg');
+    background: center / contain no-repeat url('../assets/images/silicon_logo_dark.svg');
 }
 
 .brand-logo-wrapper {
