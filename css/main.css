@@ -887,7 +887,7 @@ p.text-green {
 
 .hero-iphone-bg {
     z-index: 2;
-    background-image: url('../assets/images/iphone_highres.png'), url('/assets/images/iphone-placeholder1.png');
+    background-image: url('../assets/images/iphone_highres.png'), url('../assets/images/iphone-placeholder1.png');
     top: -4rem;
     right: 0;
     opacity: 0;
@@ -897,7 +897,7 @@ p.text-green {
 
 .hero-iphone-sm {
     z-index: 1;
-    background-image: url('../assets/images/iphone_highres.png'), url('/assets/images/iphone-placeholder2.png');
+    background-image: url('../assets/images/iphone_highres.png'), url('../assets/images/iphone-placeholder2.png');
     top: 2.5rem;
     right: 30%;
     opacity: 0;
