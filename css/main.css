@@ -78,7 +78,9 @@ html {
     color-scheme: light;
 }
 
-body {font-family: "Manrope", sans-serif; font-weight: 300; font-style: normal;}
+body {
+    font-family: "Manrope", sans-serif; font-weight: 300; font-style: normal;
+}
 
 h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
@@ -172,7 +174,7 @@ p.text-green {
     .showcase-app .iphone-bg:nth-child(3) {background-position: right;}
 
 .iphone-bg {
-    background-image: url('/assets/images/iphone_highres.png'), url('/assets/images/iphone-placeholder1.png');
+    background-image: url('../assets/images/iphone_highres.png'), url('../assets/images/iphone-placeholder1.png');
     height: 550px;
     aspect-ratio: 271 / 546;
     background-repeat: no-repeat, no-repeat;
@@ -192,11 +194,11 @@ p.text-green {
 }
 
 .iphone-bg-app1 {
-    background-image: url('/assets/images/iphone-placeholder2.png');
+    background-image: url('../assets/images/iphone-placeholder2.png');
 }
 
 .iphone-bg-app2 {
-    background-image: url('/assets/images/iphone-placeholder3.png');
+    background-image: url('../assets/images/iphone-placeholder3.png');
 }
 
 .lg-screen {
@@ -598,8 +600,8 @@ p.text-green {
     background-position: center;
 }
 
-.avatar-girl {background-image: url('../../../assets/images/avatars/avatar_girl.png');}
-.avatar-guy {background-image: url('../../../assets/images/avatars/avatar_guy.png');}
+.avatar-girl {background-image: url('../assets/images/avatars/avatar_girl.png');}
+.avatar-guy {background-image: url('../assets/images/avatars/avatar_guy.png');}
 
 .person-info {
     flex: 1; 
@@ -1061,10 +1063,6 @@ html.dark .google-play {
     border-radius: 5px;
 }
 
-.nav-wrapper{
-    
-}
-
 .nav-wrapper #hamburger-button {
   display: none;
 }
@@ -1174,9 +1172,11 @@ html.dark .google-play {
     transition: background 0.2s;
     vertical-align: middle;
 }
+
 .toggle-checkbox:checked {
     background: #fff;
 }
+
 .toggle-checkbox::before {
     content: "";
     position:absolute;
@@ -1188,6 +1188,7 @@ html.dark .google-play {
     border-radius: 50%;
     transition: left 0.2s, background 0.2s;
 }
+
 .toggle-checkbox:checked::before {
     left: 21px;
     background: #131022;
