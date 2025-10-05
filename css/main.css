@@ -91,7 +91,11 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 900;
 }
 
-h1 {font-size: 2.5rem;  line-height: 1.5;}
+.display{font-size: 4rem; line-height: 1.3;}
+@media (min-width: 768px) and (max-width: 1023px){.display{font-size: 3rem; line-height: 1.3;}}
+@media (min-width: 1024px){.display{font-size: 3.5rem; line-height: 1.5;}}
+
+h1 {font-size: 2.5rem;  line-height: 1.3;}
 h2 {font-size: 1.5rem;}
 h3 {font-size: 1.2rem;}
 h4 {font-size: 1rem;}
@@ -846,7 +850,7 @@ p.text-green {
     .hero-headline
     {
         text-align:center;
-        width:50vw;
+        width:60vw;
         margin-bottom:6rem;
     }
 }
